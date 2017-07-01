@@ -1,7 +1,7 @@
 /*
  * [Licensed per the Open Source "MIT License".]
  * 
- * Copyright (c) 1999 - 2008 by
+ * Copyright (c) 1999 - 2017 by
  * Global Technology Consulting Group, Inc. at
  * http://gtcGroup.com
  * 
@@ -33,7 +33,7 @@ import java.util.HashMap;
  * This business object test class encapsulates array attributes.
  * </p>
  * <p style="font-family:Verdana; font-size:10px; font-style:italic">
- * Copyright (c) 1999 - 2008 by Global Technology Consulting Group, Inc. at <a
+ * Copyright (c) 1999 - 2017 by Global Technology Consulting Group, Inc. at <a
  * href="http://gtcGroup.com">gtcGroup.com </a>.
  * </p>
  * 

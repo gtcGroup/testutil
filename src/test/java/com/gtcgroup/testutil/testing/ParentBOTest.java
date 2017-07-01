@@ -1,0 +1,81 @@
+/*
+ * [Licensed per the Open Source "MIT License".]
+ * 
+ * Copyright (c) 1999 - 2017 by
+ * Global Technology Consulting Group, Inc. at
+ * http://gtcGroup.com
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+package com.gtcgroup.testutil.testing;
+
+import com.gtcgroup.testutil.TestUtil;
+import com.gtcgroup.testutil.bo.dependency.ChildBO;
+import com.gtcgroup.testutil.bo.dependency.ParentBO;
+import com.gtcgroup.testutil.bo.dependency.ParentBOusingInterfaces;
+
+/**
+ * <p>
+ * Test class.
+ * </p>
+ * <p style="font-family:Verdana; font-size:10px; font-style:italic">
+ * Copyright (c) 1999 - 2017 by Global Technology Consulting Group, Inc. at <a
+ * href="http://gtcGroup.com">gtcGroup.com </a>.
+ * </p>
+ * 
+ * @author MarvinToll@gtcGroup.com 
+ * @since v. 1.0
+ */
+
+public class ParentBOTest extends BaseTestUtilCase {
+
+	/**
+	 * Verify accessor methods of a mutable business object.
+	 */
+
+	public void testParentBO() {
+
+		assertTrue(TestUtil.verifyMutable(new ParentBO(new Long(12345))));
+	}
+
+	/**
+	 * Verify accessor methods of a mutable business object.
+	 */
+
+	public void testParentBOusingInterfaces() {
+
+		assertTrue(TestUtil.verifyMutable(new ParentBOusingInterfaces(new Long(
+				12345))));
+	}
+
+	/**
+	 * Verify accessor methods of a mutable business object.
+	 */
+	public void testParentBOmanualTest() {
+
+		ParentBOusingInterfaces parentBOusingInterfaces = new ParentBOusingInterfaces(
+				new Long(9876));
+		ChildBO childBO = new ChildBO(new Long(1));
+
+		parentBOusingInterfaces.setChildBO2(childBO);
+
+		assertSame(childBO, parentBOusingInterfaces.getChildBO2());
+	}
+}

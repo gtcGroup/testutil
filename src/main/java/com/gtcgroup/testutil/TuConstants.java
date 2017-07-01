@@ -1,7 +1,7 @@
 /*
  * [Licensed per the Open Source "MIT License".]
  * 
- * Copyright (c) 1999 - 2008 by
+ * Copyright (c) 1999 - 2017 by
  * Global Technology Consulting Group, Inc. at
  * http://gtcGroup.com 
  * 
@@ -31,7 +31,7 @@ package com.gtcgroup.testutil;
  * This class provides constants.
  * </p>
  * <p style="font-family:Verdana; font-size:10px; font-style:italic">
- * Copyright (c) 1999 - 2008 by Global Technology Consulting Group, Inc. at <a
+ * Copyright (c) 1999 - 2017 by Global Technology Consulting Group, Inc. at <a
  * href="http://gtcGroup.com">gtcGroup.com </a>.
  * </p>
  * 
@@ -52,7 +52,7 @@ final class TuConstants {
 	/**
 	 * The version number - should be incremented with each release.
 	 */
-	static final String TEST_UTIL_VERSION = "2.5";
+	static final String TEST_UTIL_VERSION = "6.0.0";
 
 	/**
 	 * String correlating to descriptor document name.
