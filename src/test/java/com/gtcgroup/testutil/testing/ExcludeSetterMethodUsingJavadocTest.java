@@ -27,8 +27,8 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.ExcludeSetterMethodUsingJavadocBO1;
-import com.gtcgroup.testutil.bo.dependency.ExcludeSetterMethodUsingJavadocBO2;
+import com.gtcgroup.testutil.to.dependency.ExcludeSetterMethodUsingJavadocBO1;
+import com.gtcgroup.testutil.to.dependency.ExcludeSetterMethodUsingJavadocBO2;
 
 /**
  * <p>

@@ -27,8 +27,8 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.VerificationModeEqualAllBO;
-import com.gtcgroup.testutil.bo.dependency.VerificationModeEqualBO;
+import com.gtcgroup.testutil.to.dependency.VerificationModeEqualAllBO;
+import com.gtcgroup.testutil.to.dependency.VerificationModeEqualBO;
 
 /**
  * <p>

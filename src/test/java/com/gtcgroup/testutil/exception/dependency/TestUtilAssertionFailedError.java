@@ -32,8 +32,8 @@ import junit.framework.AssertionFailedError;
  * This class serves as the class for all TestUtil (JUnit) testing exceptions.
  * 
  * <p style="font-family:Verdana; font-size:10px; font-style:italic">
- * Copyright (c) 1999 - 2017 by Global Technology Consulting Group, Inc. at <a
- * href="http://gtcGroup.com">gtcGroup.com </a>.
+ * Copyright (c) 1999 - 2017 by Global Technology Consulting Group, Inc. at
+ * <a href="http://gtcGroup.com">gtcGroup.com </a>.
  * </p>
  * 
  * @author MarvinToll@gtcGroup.com
@@ -41,8 +41,7 @@ import junit.framework.AssertionFailedError;
  */
 public class TestUtilAssertionFailedError extends AssertionFailedError {
 
-	/** Attribute. */
-	static final long serialVersionUID = -7034897190745769999L;
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Constructor

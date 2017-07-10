@@ -28,7 +28,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-def javaVersion = JavaVersion.VERSION_1_6;
+def javaVersion = JavaVersion.VERSION_1_8;
 sourceCompatibility = javaVersion;
 targetCompatibility = javaVersion;
 
@@ -40,7 +40,8 @@ repositories {
 dependencies {
 
 	compile 'junit:junit:4.12'
-	compile 'com.thoughtworks.qdox:qdox:1.12.1'
+	compile 'com.gtcgroup:justify-core:8.+'
+	compile 'com.google.guava:guava:22.+'
 }
 
 if (JavaVersion.current().isJava8Compatible()) {
@@ -67,7 +68,7 @@ signing {
 
 group = "com.gtcgroup"
 archivesBaseName = "justify-core"
-version = "6.0.0"
+version = "8.0.0"
 
 artifacts {
     archives javadocJar, sourcesJar

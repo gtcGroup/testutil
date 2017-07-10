@@ -27,8 +27,8 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.PrimitiveInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.PrimitiveValidBO;
+import com.gtcgroup.testutil.to.dependency.PrimitiveInvalidBO;
+import com.gtcgroup.testutil.to.dependency.PrimitiveValidBO;
 
 /**
  * <p>

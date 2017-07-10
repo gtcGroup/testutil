@@ -57,88 +57,88 @@ final class TuConstants {
 	/**
 	 * String correlating to descriptor document name.
 	 */
-	static final String DESCRIPTOR_DOCUMENT_NAME = "testutil-config.xml";
+	//static final String DESCRIPTOR_DOCUMENT_NAME = "testutil-config.xml";
 
 	/**
 	 * String correlating to descriptor document node.
 	 */
-	static final String DOCUMENT_NODE_CONFIGURATION = "Configuration";
+	//static final String DOCUMENT_NODE_CONFIGURATION = "Configuration";
 
 	/**
 	 * String correlating to descriptor document node.
 	 */
-	static final String DOCUMENT_NODE_ELEMENT = "Element";
+	//static final String DOCUMENT_NODE_ELEMENT = "Element";
 
-	/**
-	 * String correlating to a descriptor document attribute.
-	 */
-	static final String DOCUMENT_ATTRIBUTE_NAME = "name";
-
-	/**
-	 * String correlating to a descriptor document attribute value.
-	 */
-	static final String DOCUMENT_ATTRIBUTE_GETTER = "getter";
-
-	/**
-	 * String correlating to a descriptor document attribute value.
-	 */
-	static final String DOCUMENT_ATTRIBUTE_SETTER = "setter";
-
-	/**
-	 * String correlating to a descriptor document attribute value.
-	 */
-	static final String DOCUMENT_ATTRIBUTE_SKIP = "skip";
-
-	/**
-	 * String correlating to a descriptor document attribute value.
-	 */
-	static final String DOCUMENT_ATTRIBUTE_CAUTION = "caution";
-
-	/**
-	 * String correlating to Javadoc tag.
-	 */
-	static final String TAG_EXCLUDE_CLASS = "excludeClass";
-
-	/**
-	 * String correlating to Javadoc tag.
-	 */
-	static final String TAG_EXCLUDE_CLASS_FROM_TESTUTIL_VERIFICATION = "excludeClassFromTestUtilVerification";
-
-	/**
-	 * String correlating to Javadoc tag.
-	 */
-	static final String TAG_EXCLUDE_SETTER = "excludeSetter";
-
-	/**
-	 * String correlating to Javadoc tag.
-	 */
-	static final String TAG_EXCLUDE_SETTER_FROM_TESTUTIL_VERIFICATION = "excludeSetterFromTestUtilVerification";
-
-	/**
-	 * String correlating to descriptor document configuration.
-	 */
-	static final String EXCLUDE_CLASS_FROM_VERIFICATION = "exclude.class.from.verification";
-
-	/**
-	 * String correlating to descriptor document configuration.
-	 */
-	static final String EXCLUDE_METHOD_PAIR_BY_SETTER = "exclude.method.pair.by.setter";
-
-	/**
-	 * String correlating to descriptor document configuration.
-	 */
-	static final String EXCLUDE_METHOD_PAIRS_BY_TYPE = "exclude.method.pairs.by.type";
-
-	/**
-	 * String *not* correlating to descriptor document configuration. The TO is
-	 * loaded programmatically.
-	 */
-	static final String INCLUDE_PRIMITIVE_RETURN_TYPE = "include.primitive.return.type";
-
-	/**
-	 * String correlating to descriptor document configuration.
-	 */
-	static final String SUBSTITUTE_SETTER_TYPE = "substitute.setter.type";
+//	/**
+//	 * String correlating to a descriptor document attribute.
+//	 */
+//	static final String DOCUMENT_ATTRIBUTE_NAME = "name";
+//
+//	/**
+//	 * String correlating to a descriptor document attribute value.
+//	 */
+//	static final String DOCUMENT_ATTRIBUTE_GETTER = "getter";
+//
+//	/**
+//	 * String correlating to a descriptor document attribute value.
+//	 */
+//	static final String DOCUMENT_ATTRIBUTE_SETTER = "setter";
+//
+//	/**
+//	 * String correlating to a descriptor document attribute value.
+//	 */
+//	static final String DOCUMENT_ATTRIBUTE_SKIP = "skip";
+//
+//	/**
+//	 * String correlating to a descriptor document attribute value.
+//	 */
+//	static final String DOCUMENT_ATTRIBUTE_CAUTION = "caution";
+//
+//	/**
+//	 * String correlating to Javadoc tag.
+//	 */
+//	static final String TAG_EXCLUDE_CLASS = "excludeClass";
+//
+//	/**
+//	 * String correlating to Javadoc tag.
+//	 */
+//	static final String TAG_EXCLUDE_CLASS_FROM_TESTUTIL_VERIFICATION = "excludeClassFromTestUtilVerification";
+//
+//	/**
+//	 * String correlating to Javadoc tag.
+//	 */
+//	static final String TAG_EXCLUDE_SETTER = "excludeSetter";
+//
+//	/**
+//	 * String correlating to Javadoc tag.
+//	 */
+//	static final String TAG_EXCLUDE_SETTER_FROM_TESTUTIL_VERIFICATION = "excludeSetterFromTestUtilVerification";
+//
+//	/**
+//	 * String correlating to descriptor document configuration.
+//	 */
+//	static final String EXCLUDE_CLASS_FROM_VERIFICATION = "exclude.class.from.verification";
+//
+//	/**
+//	 * String correlating to descriptor document configuration.
+//	 */
+//	static final String EXCLUDE_METHOD_PAIR_BY_SETTER = "exclude.method.pair.by.setter";
+//
+//	/**
+//	 * String correlating to descriptor document configuration.
+//	 */
+//	static final String EXCLUDE_METHOD_PAIRS_BY_TYPE = "exclude.method.pairs.by.type";
+//
+//	/**
+//	 * String *not* correlating to descriptor document configuration. The TO is
+//	 * loaded programmatically.
+//	 */
+//	static final String INCLUDE_PRIMITIVE_RETURN_TYPE = "include.primitive.return.type";
+//
+//	/**
+//	 * String correlating to descriptor document configuration.
+//	 */
+//	static final String SUBSTITUTE_SETTER_TYPE = "substitute.setter.type";
 
 	/**
 	 * String correlating to true for boolean operations.

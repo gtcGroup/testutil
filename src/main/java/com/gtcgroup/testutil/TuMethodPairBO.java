@@ -26,6 +26,8 @@
 
 package com.gtcgroup.testutil;
 
+import com.gtcgroup.testutil.po.TuMethodSetPO;
+
 /**
  * <p>
  * This Business Object contains both getter and setter methods with initialized
@@ -45,7 +47,7 @@ class TuMethodPairBO extends TuBaseBO {
 	private final TuMethodGetBO tuMethodGetBO;
 
 	/** Immutable Business Object with initialized attributes. */
-	private final TuMethodSetBO tuMethodSetBO;
+	private final TuMethodSetPO tuMethodSetBO;
 
 	/**
 	 * Constructor
@@ -56,7 +58,7 @@ class TuMethodPairBO extends TuBaseBO {
 	 *            Immutable Business Object with initialized attributes.
 	 */
 	TuMethodPairBO(final TuMethodGetBO tuMethodGetBO,
-			final TuMethodSetBO tuMethodSetBO) {
+			final TuMethodSetPO tuMethodSetBO) {
 
 		super();
 
@@ -77,7 +79,7 @@ class TuMethodPairBO extends TuBaseBO {
 	/**
 	 * @return TuMethodSetBO
 	 */
-	TuMethodSetBO getTuMethodSetBO() {
+	TuMethodSetPO getTuMethodSetBO() {
 		return this.tuMethodSetBO;
 	}
 

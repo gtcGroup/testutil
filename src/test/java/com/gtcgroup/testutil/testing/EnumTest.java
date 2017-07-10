@@ -27,8 +27,8 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.EnumTestInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.EnumTestValidBO;
+import com.gtcgroup.testutil.to.dependency.EnumTestInvalidBO;
+import com.gtcgroup.testutil.to.dependency.EnumTestValidBO;
 
 /**
  * <p>

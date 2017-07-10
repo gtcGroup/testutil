@@ -27,10 +27,10 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.WithConstructorEnumBO;
-import com.gtcgroup.testutil.bo.dependency.WithConstructorEnumInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.WithConstructorInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.WithConstructorValidBO;
+import com.gtcgroup.testutil.to.dependency.WithConstructorEnumBO;
+import com.gtcgroup.testutil.to.dependency.WithConstructorEnumInvalidBO;
+import com.gtcgroup.testutil.to.dependency.WithConstructorInvalidBO;
+import com.gtcgroup.testutil.to.dependency.WithConstructorValidBO;
 
 import junit.framework.AssertionFailedError;
 

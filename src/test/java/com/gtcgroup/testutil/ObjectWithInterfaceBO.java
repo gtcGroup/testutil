@@ -31,8 +31,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.gtcgroup.testutil.bo.dependency.BaseTestBO;
-import com.gtcgroup.testutil.bo.dependency.IObjectTestValidBO;
+import com.gtcgroup.testutil.to.dependency.BaseTestBO;
+import com.gtcgroup.testutil.to.dependency.IObjectTestValidBO;
 
 /**
  * <p>

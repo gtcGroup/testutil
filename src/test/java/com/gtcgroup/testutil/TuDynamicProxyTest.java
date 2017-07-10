@@ -28,6 +28,8 @@ package com.gtcgroup.testutil;
 
 import java.util.List;
 
+import org.junit.Assert;
+
 import com.gtcgroup.testutil.testing.BaseTestUtilCase;
 
 /**
@@ -52,7 +54,7 @@ public class TuDynamicProxyTest extends BaseTestUtilCase {
 
 		Object testObject = TuDynamicProxy.newInstance(List.class);
 
-		assertTrue("$Proxy".equalsIgnoreCase(testObject.getClass().getName()
+		Assert.assertTrue("$Proxy".equalsIgnoreCase(testObject.getClass().getName()
 				.substring(0, 6)));
 
 	}

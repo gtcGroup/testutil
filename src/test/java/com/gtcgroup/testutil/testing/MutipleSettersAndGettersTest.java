@@ -27,8 +27,8 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.MultipleGettersBO;
-import com.gtcgroup.testutil.bo.dependency.MultipleSettersBO;
+import com.gtcgroup.testutil.to.dependency.MultipleGettersBO;
+import com.gtcgroup.testutil.to.dependency.MultipleSettersBO;
 
 /**
  * <p>

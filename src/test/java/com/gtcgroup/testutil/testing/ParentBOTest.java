@@ -27,9 +27,9 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.ChildBO;
-import com.gtcgroup.testutil.bo.dependency.ParentBO;
-import com.gtcgroup.testutil.bo.dependency.ParentBOusingInterfaces;
+import com.gtcgroup.testutil.to.dependency.ChildBO;
+import com.gtcgroup.testutil.to.dependency.ParentBO;
+import com.gtcgroup.testutil.to.dependency.ParentBOusingInterfaces;
 
 /**
  * <p>

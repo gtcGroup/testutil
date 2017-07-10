@@ -27,7 +27,7 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.WithParametersWithExceptionsBO;
+import com.gtcgroup.testutil.to.dependency.WithParametersWithExceptionsBO;
 
 /**
  * <p>

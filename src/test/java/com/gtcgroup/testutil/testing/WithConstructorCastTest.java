@@ -27,7 +27,7 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.WithConstructorCastBO;
+import com.gtcgroup.testutil.to.dependency.WithConstructorCastBO;
 
 /**
  * <p>

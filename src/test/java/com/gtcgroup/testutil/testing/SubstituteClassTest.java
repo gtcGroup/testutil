@@ -27,11 +27,11 @@
 package com.gtcgroup.testutil.testing;
 
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.SubstituteClassConstructorFatalBO;
-import com.gtcgroup.testutil.bo.dependency.SubstituteClassEndlessLoopBO;
-import com.gtcgroup.testutil.bo.dependency.SubstituteClassInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.SubstituteClassNoSubstituteBO;
-import com.gtcgroup.testutil.bo.dependency.SubstituteClassValidBO;
+import com.gtcgroup.testutil.to.dependency.SubstituteClassConstructorFatalBO;
+import com.gtcgroup.testutil.to.dependency.SubstituteClassEndlessLoopBO;
+import com.gtcgroup.testutil.to.dependency.SubstituteClassInvalidBO;
+import com.gtcgroup.testutil.to.dependency.SubstituteClassNoSubstituteBO;
+import com.gtcgroup.testutil.to.dependency.SubstituteClassValidBO;
 
 /**
  * <p>

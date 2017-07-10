@@ -43,7 +43,7 @@ import junit.framework.TestCase;
  * @since v. 1.0
  */
 
-public abstract class BaseTestUtilCase extends TestCase {
+public abstract class BaseTestUtilCase  {
 
 	/**
 	 * Default implementation.

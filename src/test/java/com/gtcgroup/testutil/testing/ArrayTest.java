@@ -26,9 +26,11 @@
 
 package com.gtcgroup.testutil.testing;
 
+import org.junit.Assert;
+
 import com.gtcgroup.testutil.TestUtil;
-import com.gtcgroup.testutil.bo.dependency.ArrayTestInvalidBO;
-import com.gtcgroup.testutil.bo.dependency.ArrayTestValidBO;
+import com.gtcgroup.testutil.to.dependency.ArrayTestInvalidBO;
+import com.gtcgroup.testutil.to.dependency.ArrayTestValidBO;
 
 /**
  * <p>
@@ -51,7 +53,7 @@ public class ArrayTest extends BaseTestUtilCase {
 
 	public void testArrayTestValidBO() {
 
-		assertTrue(TestUtil.verifyMutable(new ArrayTestValidBO(), null));
+		Assert.assertTrue(TestUtil.verifyMutable(new ArrayTestValidBO(), null));
 	}
 
 	/**
