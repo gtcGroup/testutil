@@ -1,6 +1,7 @@
 package com.gtcgroup.testutil.helper;
 
 import com.gtcgroup.testutil.exception.TestUtilCautionException;
+import com.gtcgroup.testutil.exception.TestUtilRuntimeException;
 
 /**
  * <p>
@@ -36,21 +37,12 @@ public enum TuClassCautionUtilHelper {
 		final StringBuffer message = new StringBuffer();
 
 		message.append("\n* Caution [# ");
-		message.append(tuResultsPO.getTotalCautions());
+		message.append(TestUtilRuntimeException.getTotalClassCautions());
 		message.append("]: Instantiation [");
 		message.append(fileName);
 		message.append("] failure.\n");
 		message.append("* ");
 
-		if (caution.getRootCause() instanceof ClassNotFoundException) {
-
-			message.append("Verify descriptor document for [");
-			message.append(caution.getRootCause().getMessage());
-			message.append("], the substitute class not found.");
-
-		} else {
-			message.append(caution.getRootCause().getMessage());
-		}
 		System.out.println(message.toString());
 	}
 }

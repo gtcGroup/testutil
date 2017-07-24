@@ -45,7 +45,7 @@ public abstract class TestUtilRuntimeException extends RuntimeException {
 	/**
 	 * Attribute maintaining the warning count for a verified object.
 	 */
-	private static int totalVerifications = 0;
+	private static int methodVerifications = 0;
 
 	/**
 	 * Attribute maintaining the warning count for a verified object.
@@ -60,22 +60,31 @@ public abstract class TestUtilRuntimeException extends RuntimeException {
 	/**
 	 * Attribute maintaining the glitch count for a verified object.
 	 */
-	private static int totalClassSkips = 0;
+	private static int classCautions = 0;
 
 	/**
 	 * Attribute maintaining the glitch count for a verified object.
 	 */
 	private static int totalMethodSkips = 0;
 
-	/** Attribute. */
-	private Exception exception = null;
-
-	/**
-	 * Constructor
-	 */
-	public TestUtilRuntimeException() {
-		super();
+	public static void addClassCaution() {
+		classCautions++;
 	}
+
+	public static void addMethodVerification() {
+		methodVerifications++;
+	}
+
+	public static int getMethodVerifications() {
+		return methodVerifications;
+	}
+
+	public static int getTotalClassCautions() {
+		return classCautions;
+	}
+
+	/** Attribute. */
+	private final Exception exception = null;
 
 	/**
 	 * Constructor
@@ -83,27 +92,10 @@ public abstract class TestUtilRuntimeException extends RuntimeException {
 	 * @param message
 	 */
 	public TestUtilRuntimeException(final String message) {
-		this(message, null);
-		return;
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param message
-	 * @param exception
-	 */
-	public TestUtilRuntimeException(final String message, final Exception exception) {
 		super(message);
-		this.exception = exception;
 		return;
 	}
 
-	/**
-	 * Gets the wrapped exception.
-	 *
-	 * @return Exception
-	 */
 	public final Exception getException() {
 		return this.exception;
 	}

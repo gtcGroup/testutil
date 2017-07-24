@@ -31,6 +31,7 @@ import java.lang.reflect.Modifier;
 
 import com.google.common.reflect.ClassPath;
 import com.gtcgroup.justify.core.exception.internal.JustifyRuntimeException;
+import com.gtcgroup.testutil.exception.TestUtilRuntimeException;
 import com.gtcgroup.testutil.helper.TuClassCautionUtilHelper;
 
 import junit.framework.AssertionFailedError;
@@ -334,17 +335,6 @@ public enum TestUtil {
 				"****************************************************************************************************\n\t");
 
 		// Line 2
-		message.append("*                 TestUtil v. ");
-		message.append(TuConstants.TEST_UTIL_VERSION);
-		message.append(" - Verify Directory Summary Results\n\t");
-
-		// Line 3
-		message.append("* -------> Skips: ");
-		// message.append(tuCountersListBO.getTotalSkips());
-		message.append(" Non-Java files, interfaces, or abstract classes not attempted.");
-		message.append("\n\t");
-
-		// Line 4
 		message.append("* -> Anticipated: ");
 		// if (0 > tuCountersListBO.getTotalVerifications() -
 		// (anticipatedWarnings + anticipatedGlitches)) {
@@ -360,21 +350,21 @@ public enum TestUtil {
 		message.append(anticipatedGlitches);
 		message.append(" Glitch(es); ");
 		message.append(anticipatedCautions);
-		message.append(" Caution(s)\n\t");
+		message.append(" Class Caution(s)\n\t");
 
-		// Line 5
+		// Line 3
 		message.append("* -----> Results: ");
-		// message.append(tuCountersListBO.getSuccessfulVerifications());
+		message.append(TestUtilRuntimeException.getTotalClassCautions());
 		message.append(" Successful Verification(s); ");
 		// message.append(tuCountersListBO.getTotalWarnings());
 		message.append(" Warning(s); ");
 		// message.append(tuCountersListBO.getTotalGlitches());
 		message.append(" Glitch(es); ");
-		// message.append(tuCountersListBO.getTotalCautions());
-		message.append(" Caution(s)");
+		message.append(TestUtilRuntimeException.getTotalClassCautions());
+		message.append(" Class Caution(s)");
 		message.append("\n\t");
 
-		// Line 6
+		// Line 4
 		message.append(
 				"****************************************************************************************************\n\n");
 

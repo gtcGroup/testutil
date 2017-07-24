@@ -34,6 +34,7 @@ import java.util.Iterator;
 import com.gtcgroup.testutil.exception.TestUtilGlitchException;
 import com.gtcgroup.testutil.exception.TestUtilRuntimeException;
 import com.gtcgroup.testutil.exception.TestUtilWarningException;
+import com.gtcgroup.testutil.helper.TuWarningUtilHelper;
 import com.gtcgroup.testutil.helper.TuMethodGlitchUtilHelper;
 import com.gtcgroup.testutil.po.TuMethodSetPO;
 
@@ -187,16 +188,17 @@ public enum TuCollectingParameterCacheHelper {
 				}
 
 				// Increment for successful invocation.
-				TestUtilRuntimeException.addVerification();
+				TestUtilRuntimeException.addMethodVerification();
 
 			} catch (final TestUtilGlitchException exception) {
 
-				// Is this the first glitch?
-				if (0 == getTuResultsPO().getTotalGlitches()) {
-
-					// Sub-header for glitches.
-					System.out.println("\n\t++ Glitch Class: " + mutableObject.getClass().getName() + " ++");
-				}
+				// // Is this the first glitch?
+				// if (0 == getTuResultsPO().getTotalGlitches()) {
+				//
+				// // Sub-header for glitches.
+				// System.out.println("\n\t++ Glitch Class: " +
+				// mutableObject.getClass().getName() + " ++");
+				// }
 
 			}
 		}
@@ -255,14 +257,14 @@ public enum TuCollectingParameterCacheHelper {
 			} else {
 
 				// Issue warning for exclusion.
-				TuExceptionWarningHandler.throwNotVerifiableWarning(
+				TuWarningUtilHelper.throwNotVerifiableWarning(
 						tuMethodSetBO.getOriginalParameterTypes()[0].getName(),
 						tuMethodGetBO.getReturnType().getName());
 			}
 		} else {
 
 			// Issue warning for exclusion.
-			TuExceptionWarningHandler.throwSetterSignatureWarning();
+			TuWarningUtilHelper.throwSetterSignatureWarning();
 		}
 
 		return tuMethodPairBO;
@@ -326,7 +328,7 @@ public enum TuCollectingParameterCacheHelper {
 					sbGetterName = null;
 
 					// Issue warning for exclusion.
-					TuExceptionWarningHandler.throwMultiplesWarningForSetter(sbSetterName.toString());
+					TuWarningUtilHelper.throwMultiplesWarningForSetter(sbSetterName.toString());
 				}
 
 				// Obtain the getter name.
@@ -340,7 +342,7 @@ public enum TuCollectingParameterCacheHelper {
 					sbSetterName = null;
 
 					// Issue warning for exclusion.
-					TuExceptionWarningHandler.throwMultiplesWarningForGetter(sbGetterName.toString());
+					TuWarningUtilHelper.throwMultiplesWarningForGetter(sbGetterName.toString());
 				}
 
 				// Determine if Javadoc interrogation is warranted.
@@ -351,7 +353,7 @@ public enum TuCollectingParameterCacheHelper {
 				// sbSetterName.toString())) {
 				//
 				// // Issue warning for exclusion.
-				// TuExceptionWarningHandler
+				// TuWarningUtilHelper
 				// .throwExcludedWarningForSetter();
 				// }
 				// }
@@ -384,8 +386,7 @@ public enum TuCollectingParameterCacheHelper {
 				System.out.println("\n\t+ Verification Warning(s) - " + mutableObject.getClass().getName() + " +");
 
 				// Process warning.
-				TuExceptionWarningHandler.processWarning(sbSetterName, sbGetterName, tuMethodPairBO, getTuResultsPO(),
-						warning);
+				TuWarningUtilHelper.processWarning(sbSetterName, sbGetterName, tuMethodPairBO, warning);
 			}
 		}
 

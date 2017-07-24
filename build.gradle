@@ -34,7 +34,7 @@ targetCompatibility = javaVersion;
 
 repositories {
 
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {

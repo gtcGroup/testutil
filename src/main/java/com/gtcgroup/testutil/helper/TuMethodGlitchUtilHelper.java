@@ -30,7 +30,7 @@ public enum TuMethodGlitchUtilHelper {
 		final StringBuffer message = new StringBuffer();
 
 		message.append("\n\tGlitch [# ");
-		message.append(tuCountersBO.getTotalGlitches());
+		// message.append(tuCountersBO.getTotalGlitches());
 		message.append("]:  Setter = [");
 		message.append(tuMethodSetBO.getMethod().getName());
 		message.append("()];  Getter = [");

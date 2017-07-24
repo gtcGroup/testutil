@@ -51,7 +51,7 @@ public class TestUtilCautionException extends TestUtilRuntimeException {
 	 */
 	public TestUtilCautionException(final String message) {
 		super(message);
-
+		TestUtilRuntimeException.addClassCaution();
 	}
 
 }

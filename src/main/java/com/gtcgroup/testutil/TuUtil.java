@@ -37,6 +37,7 @@ import com.gtcgroup.justify.core.helper.internal.ReflectionUtilHelper;
 import com.gtcgroup.testutil.exception.TestUtilWarningException;
 import com.gtcgroup.testutil.helper.TuClassCautionUtilHelper;
 import com.gtcgroup.testutil.helper.TuMethodGlitchUtilHelper;
+import com.gtcgroup.testutil.helper.TuWarningUtilHelper;
 import com.gtcgroup.testutil.mock.EnumMock;
 import com.gtcgroup.testutil.po.TuMethodPO;
 import com.gtcgroup.testutil.po.TuMethodSetPO;
@@ -117,13 +118,13 @@ class TuUtil {
 		// } catch (final ClassNotFoundException e) {
 		//
 		// // That didn't work so well.
-		// TuExceptionWarningHandler.throwSubstitutionWarningForClassNotFound(parameterType.getName(),
+		// TuWarningUtilHelper.throwSubstitutionWarningForClassNotFound(parameterType.getName(),
 		// method,
 		// constructor, e.getMessage());
 		// } catch (final Error e) {
 		//
 		// // Note: Error - perhaps NoClassDefFoundError?
-		// TuExceptionWarningHandler.throwSubstitutionWarningForClassNotFound(parameterType.getName(),
+		// TuWarningUtilHelper.throwSubstitutionWarningForClassNotFound(parameterType.getName(),
 		// method,
 		// constructor, "This class excluded because of an error [" +
 		// e.getClass().getName() + "].");
@@ -280,7 +281,7 @@ class TuUtil {
 		// .containsElementGetter(tuMethodGetBO.getReturnType().getName())) {
 		//
 		// // Throw a warning.
-		// TuExceptionWarningHandler.throwExcludedWarningForReturnType(tuMethodGetBO.getReturnType().getName());
+		// TuWarningUtilHelper.throwExcludedWarningForReturnType(tuMethodGetBO.getReturnType().getName());
 		// }
 
 		// Iterate through the setter array.
@@ -293,7 +294,7 @@ class TuUtil {
 		// {
 		//
 		// // Throw a warning.
-		// TuExceptionWarningHandler
+		// TuWarningUtilHelper
 		// .throwExcludedWarningForParameter(tuMethodSetBO.getOriginalParameterTypes()[i].getName());
 		// }
 		// }
@@ -374,7 +375,7 @@ class TuUtil {
 	// sbSetterName.toString())) {
 	//
 	// // Issue warning for exclusion.
-	// TuExceptionWarningHandler.throwExcludedWarningForSetter();
+	// TuWarningUtilHelper.throwExcludedWarningForSetter();
 	// }
 	//
 	// return;
@@ -408,7 +409,7 @@ class TuUtil {
 		// Determine if endless loop.
 		if (15 < loopCounter) {
 
-			TuExceptionWarningHandler.throwEndlessLoopWarning(loopCounter, theClass);
+			TuWarningUtilHelper.throwEndlessLoopWarning(loopCounter, theClass);
 		}
 
 		// Initialize.
@@ -453,7 +454,7 @@ class TuUtil {
 			} else if (Modifier.isAbstract(paramTypes[i].getModifiers())) {
 
 				// Issue warning for exclusion.
-				TuExceptionWarningHandler.throwAbstractClassWarning(paramTypes[i], method, constructor);
+				TuWarningUtilHelper.throwAbstractClassWarning(paramTypes[i], method, constructor);
 
 			} else {
 
@@ -521,8 +522,15 @@ class TuUtil {
 					objInstantiated = ReflectionUtilHelper.instantiatePublicConstructorNoArgument(constructor, true);
 
 					if (null == objInstantiated) {
-						TuClassCautionUtilHelper.throwClassInstantiationCaution(
-								"The class [" + theClass + "] could not be instantiated.");
+
+						final Object[] constructorParameterValues = { new String() };
+						objInstantiated = ReflectionUtilHelper
+								.instantiatePublicConstructorWithArgument(constructorParameterValues, theClass);
+
+						if (null == objInstantiated) {
+							TuClassCautionUtilHelper.throwClassInstantiationCaution(
+									"The class [" + theClass + "] could not be instantiated.");
+						}
 					}
 				}
 			}
